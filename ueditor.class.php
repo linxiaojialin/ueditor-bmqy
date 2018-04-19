@@ -81,7 +81,9 @@ if ( !class_exists( "UEditor" ) ) {
     mce_statusbar.parentNode.removeChild(mce_statusbar);
     window.addEventListener("load", function(){
             var fullscreenDiv = document.getElementById("wp-fullscreen-body");
-            fullscreenDiv.parentNode.removeChild(fullscreenDiv);
+            if (fullscreenDiv) {
+                fullscreenDiv.parentNode.removeChild(fullscreenDiv);
+            }
         }, false);
 </script>
 ';
